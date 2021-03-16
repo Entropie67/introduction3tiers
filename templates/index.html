@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <title>Ma page {{nom}}</title>
+</head>
+<body>
+    {% for i in range(12)%}
+        <p>un petit paragraphe</p>
+    {% endfor %}
+
+</body>
+</html>

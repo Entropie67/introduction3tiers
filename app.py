@@ -1,14 +1,14 @@
 from flask import Flask
 from flask import render_template
-
+from powerapp.marvel import liste_personnage
 # Pensez à faire pip install flask
 
 app = Flask(__name__)
 
 @app.route('/')
 def main():
-    prenom = "Olivier"
-    return render_template('index.html', nom=prenom)
+    liste = liste_personnage()
+    return render_template('index.html', perso=liste)
 
 @app.route('/coucou/')
 def deux():
